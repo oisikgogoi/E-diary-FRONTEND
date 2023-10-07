@@ -37,7 +37,7 @@ function MainPage() {
         // Store the data in localStorage to persist it across page refreshes
         localStorage.setItem('notes', JSON.stringify(newData));
       } catch (err) {
-        localStorage.removeItem('accessToken');
+        // localStorage.removeItem('accessToken');
         setError(err.message);
       }
     };

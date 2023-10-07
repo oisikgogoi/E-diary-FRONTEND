@@ -22,8 +22,9 @@ function Login() {
      setLoading(true)
 
      const response = await axios.post('/api/user/login',{password,email})
-        toast.success("logged in successfully")
+     
         localStorage.setItem("accessToken", response.data.accesstoken)
+        toast.success("logged in successfully")
         navigate('/view-all-notes') 
     }
     catch(err){
