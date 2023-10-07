@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Merriweather+Sans&family=Open+Sans:wght@300;700&family=Poppins:wght@200;400&family=Roboto:wght@100;300;400;700&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap');
+*{
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@keyframes edit_button_animation{
+  0%{
+    left: -120px;
+  }
+  100%{
+    left:0px;
+  }
+}
+@keyframes delete_button_animation{
+  0%{
+    right: -120px;
+  }
+  100%{
+    right:0px;
+  }
+}
+
+@media screen and (max-width:931px){
+
+} 
+
+/* ----------------------------Nav bar ------------------------------------ */
+nav{
+  height: 5rem;
+  width: 100%;
+  background-color: rgba(80, 58, 26, 0.445);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1rem;
+  position: fixed;
+}
+
+.logo{
+  font-size:1.5rem;
+  color: rgb(192, 168, 135);
+}
+
+nav .nav-links{
+  display:flex;
+  align-items: center;
+}
+nav .nav-links > li {
+  margin: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+  text-transform: capitalize;
+  color: rgb(192, 168, 135);
+  cursor: pointer;
+}
+
+nav .nav-links > li  button {
+  padding: .5rem;
+  border: 1px solid  #d4af37;
+  color: #d4af37;
+  background-color:rgb(84, 49, 0) ;
+  text-transform: capitalize;
+  cursor: pointer;
+
+}
+
+nav .nav-links > li  button:hover {
+  color: black;
+  border: 1px solid rgb(84, 49, 0);
+  background-color: rgb(192, 168, 135) ;
+
+
+}
+
+.nav-login{
+  color: rgb(192, 168, 135);
+}
+
+/* ----------------------------Nav bar ------------------------------------ */
+.home{
+  background-image: url("/public/images/2878911.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color:rgba(21, 15, 6, 0.843) ;
+  background-blend-mode:soft-light;
+  padding-top:5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column ;
+  background-attachment: fixed;
+}
+
+
+.home .home-btn {
+  display: block;
+  padding: 0.7em 1em;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: bold;
+  z-index: 1;
+  cursor: pointer;
+ }
+ 
+ .home .cube {
+  position: relative;
+  transition: all 0.5s;
+ }
+ 
+ .home .cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #d4af37;
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+  transition: all 0.4s;
+ }
+ 
+ .home .cube .bg-top .bg-inner {
+  bottom: 0;
+ }
+ 
+ .home .cube .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background: #d4af37;
+  transition: all 0.4s;
+ }
+ 
+ .home .cube .bg-right {
+  position: absolute;
+  background: #d4af37;
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+  transition: all 0.4s;
+ }
+ 
+ .home .cube .bg-right .bg-inner {
+  left: 0;
+ }
+ 
+ .home .cube .bg-inner {
+  background-color:rgb(84, 49, 0) ;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+ }
+ 
+ .home .cube .text {
+  position: relative;
+  transition: all 0.4s;
+ }
+ 
+ .home .cube:hover .bg-inner {
+  background: #d4af37;
+  transition: all 0.4s;
+ }
+ 
+ .home .cube:hover .text {
+  color: #28282d;
+  transition: all 0.4s;
+ }
+ 
+ .home .cube:hover .bg-right,
+ .cube:hover .bg,
+ .cube:hover .bg-top {
+  background: #28282d;
+ }
+ 
+ .home .cube:active {
+  z-index: 9999;
+  animation: bounce .1s linear;
+ }
+ 
+ @keyframes bounce {
+  50% {
+   transform: scale(0.9);
+  }
+ }
+
+
+ .home-main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ .home-main p{
+  width: 50vw;
+  color: #a2a2a2ec;
+  font-size: larger;
+  text-align: center;
+  font-family:Century Gothic,sans-serif;
+  margin: 2rem 0;
+ }
+ .home-main h1{
+  font-family:Lucida Calligraphy;
+  text-transform: capitalize;
+  font-size: 4rem;
+  color: rgb(192, 168, 135);
+
+ }
+
+
+ @media all and (max-width:875px){
+  .home-main p{
+    width: 70vw;
+    font-size: large;
+   }
+   .home-main h1{
+    font-size: 3rem;
+   }
+  
+ }
+
+ @media all and (max-width:575px){
+  .home-main p{
+    width: 90vw;
+    font-size: large;
+   }
+   .home-main h1{
+    font-size: 2rem;
+   }
+  
+ }
+ 
+ .home-startWriting-button-link{
+  color:#d4af37;
+}
+
+ /* <--------------------------------------------home-footer -------------------------------------------------> */
+ .home-footer{
+   height: 30vh;
+   width: 100%;
+   background-image: url('/public/images/683642.webp');
+   background-position:center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #1f0f00ce;
+   background-blend-mode:multiply;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .home-footer address{
+  color: white;
+  display: grid;
+  color: rgb(82, 197, 255);
+}
+
+
+/* ------------------------------------------Universal------------------------------- */
+
+
+.delete, .edit{
+  width:5rem;
+  height:2rem;
+  display:grid;
+  place-items:center;
+  margin:.5rem;
+  cursor:pointer;
+}
+.delete{
+  color:white;
+  background:red;
+}
+.edit{
+  background:rgba(186, 166, 110, 0.808);
+  color: black;
+}
+
+.buttons{
+  width:100%;
+  height:max-content;
+  display:flex;
+  align-items:center;
+  justify-content:right;
+}
+
+/* ----------------------------------------loader--------------------------------------------------------- */
+.custom-loader {
+  width: 25px;
+  height: 25px;
+  border-radius: 60%;
+  background: 
+    radial-gradient(farthest-side,#030303 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#000000);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  animation:s3 1s infinite linear;
+}
+
+@keyframes s3{ 
+  100%{transform: rotate(1turn)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-page-error-container{
+  width:100vw;
+  height:100vh;
+  display:grid;
+  place-items: center;
+  font-size: 20px;
+}
