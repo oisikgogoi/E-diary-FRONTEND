@@ -32,7 +32,7 @@ function SignUp () {
      setLoading(false)
   }
 
- console.log(loading)
+
 
   return (
     <Wrap>

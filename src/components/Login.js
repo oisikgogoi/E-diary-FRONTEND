@@ -22,14 +22,9 @@ function Login() {
      setLoading(true)
 
      const response = await axios.post('/api/user/login',{password,email})
-     if(response && response.data.accesstoken){
         toast.success("logged in successfully")
         localStorage.setItem("accessToken", response.data.accesstoken)
-        navigate('/view-all-notes')
-      }else{
-        toast.error(response.data.msg)
-      }
-     
+        navigate('/view-all-notes') 
     }
     catch(err){
       toast.error(err.response.data.msg)
