@@ -32,7 +32,7 @@ function EditNote() {
         };
   
         try {
-          const response = await axios.get(`/api/note/${params.id}`,config);
+          const response = await axios.get(`https://e-diary-backend-oisik-clt8.onrender.com/api/note/${params.id}`,config);
           setTitle(response.data.title)
           setDescription(response.data.description)
 
