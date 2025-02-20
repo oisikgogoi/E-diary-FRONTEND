@@ -21,7 +21,7 @@ function Login() {
     try{
      setLoading(true)
 
-     const response = await axios.post('/api/user/login',{password,email})
+     const response = await axios.post('https://e-diary-backend-oisik-clt8.onrender.com/api/user/login',{password,email})
      
         localStorage.setItem("accessToken", response.data.accesstoken)
         toast.success("logged in successfully")
