@@ -53,7 +53,7 @@ function ReadNote() {
     };
 
     try {
-      await axios.delete(`/api/note/${params.id}`,config);
+      await axios.delete(`https://e-diary-backend-oisik-clt8.onrender.com/api/note/${params.id}`,config);
       toast.success('note successfully deleted')
       navigate('/view-all-notes')
 
