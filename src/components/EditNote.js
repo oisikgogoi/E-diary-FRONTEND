@@ -57,7 +57,7 @@ function EditNote() {
     
         try {
 
-        const res = await axios.put(`/api/note/${params.id}`,{title,description},config);
+        const res = await axios.put(`https://e-diary-backend-oisik-clt8.onrender.com/api/note/${params.id}`,{title,description},config);
         console.log(res)
         toast.success('successfully updated the note')
         navigate('/view-all-notes')
