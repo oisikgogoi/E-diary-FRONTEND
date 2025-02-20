@@ -18,7 +18,7 @@ function Note({title,paragraph,id}) {
       };
   
       try {
-        await axios.delete(`/api/note/${id}`,config);
+        await axios.delete(`https://e-diary-backend-oisik-clt8.onrender.com/api/note/${id}`,config);
         toast.success('note successfully deleted')
         window.location.reload()
   
