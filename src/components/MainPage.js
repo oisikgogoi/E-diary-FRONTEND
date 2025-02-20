@@ -31,7 +31,7 @@ function MainPage() {
       };
 
       try {
-        const response = await axios.get('/api/note/', config);
+        const response = await axios.get('https://e-diary-backend-oisik-clt8.onrender.com/api/note/', config);
         const newData = response.data.note;
         setData(newData);
         // Store the data in localStorage to persist it across page refreshes
