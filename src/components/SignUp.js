@@ -21,7 +21,7 @@ function SignUp () {
     try{
      setLoading(true)
 
-     await axios.post('/api/user/register',{username,password,email})
+     await axios.post('https://e-diary-backend-oisik-clt8.onrender.com/api/user/register',{username,password,email})
         toast.success("registered successfully")
         navigate('/login')
     }
