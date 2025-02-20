@@ -54,7 +54,7 @@ function CreateNote() {
       let title = currentTextState.title.text
       let description = currentTextState.description.text
 
-      const response = await axios.post('/api/note/', {title,description},config);
+      const response = await axios.post('https://e-diary-backend-oisik-clt8.onrender.com/api/note/', {title,description},config);
       console.log(response.data)
       toast.success('successfully created a note')
       navigate('/view-all-notes')
